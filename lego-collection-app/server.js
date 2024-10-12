@@ -8,14 +8,14 @@
 *
 * Name: Saurab Khadka Student ID: 148501224 Date: 2024/10/11
 *
-* Published URL: ___________________________________________________________
+* Published URL: https://assignment3final-3uu6cjmh7-saurab-khadkas-projects.vercel.app/
 *
 ********************************************************************************/
 const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public/image')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/home.html'));
